@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -36,7 +35,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-
         CheckGameOver();
         int choiceIndex = GetPressedButtonIndex();
         if (!IsIndexValid(choiceIndex))
@@ -48,9 +46,8 @@ public class GameManager : MonoBehaviour
     {
         if (!Input.GetKeyDown(KeyCode.Return))
             return;
-        if (_currentStep.Choices.Length==0)
+        if (_currentStep.Choices.Length == 0)
             _sceneLoader.LoadScene(_gameOverSceneName);
-        
     }
 
     #endregion
@@ -94,11 +91,5 @@ public class GameManager : MonoBehaviour
         _sceneLoader.LoadScene(_menuSceneName);
     }
 
-    /*
-    public void LoadScene(int sceneIndex)
-    {
-        SceneManager.LoadScene(_menuSceneName);
-    }
-*/
     #endregion
 }

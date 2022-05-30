@@ -17,7 +17,7 @@ public static class NumButtonHelper
         KeyCode.Alpha8,
         KeyCode.Alpha9
     };
-    
+
     private static readonly KeyCode[] KeyPadKeys = new[]
     {
         KeyCode.Keypad0,

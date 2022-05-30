@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MenuScreen: MonoBehaviour
+public class MenuScreen : MonoBehaviour
 {
     [SerializeField] private Button _playButton;
     [SerializeField] private SceneLoader _sceneLoader;

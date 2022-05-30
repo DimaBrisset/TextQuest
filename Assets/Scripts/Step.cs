@@ -1,7 +1,4 @@
-using System;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
 
 public class Step : MonoBehaviour
@@ -16,18 +13,17 @@ public class Step : MonoBehaviour
     public string ChoicesText;
 
     public Step[] Choices;
+    public Sprite States;
 
     #endregion
 
 
-  
-    public Sprite[] States; // Состояния персонажа
+    #region Public Methods
 
-    // Этот метод вешаете на нужную вам кнопку и выставляете соответствующий индекс
     public void Change(int stateIndex)
     {
-        GetComponent<Image>().sprite = States[stateIndex];
+        GetComponent<Image>().sprite = States;
     }
-}
 
-  
+    #endregion
+}
