@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _descriptionLabel;
     [SerializeField] private TextMeshProUGUI _choicesLabel;
     [SerializeField] private Button _menuButton;
+    [SerializeField] private Image _stepImage;
 
     [Header("Initial Elements")]
     [SerializeField] private Step _startStep;
@@ -25,7 +26,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
 
-    #region Unity Lifecycle
+    #region Unity LifeCycle
 
     private void Start()
     {
@@ -84,6 +85,7 @@ public class GameManager : MonoBehaviour
         _headerLabel.text = _currentStep.DebugHeaderText;
         _descriptionLabel.text = _currentStep.DescriptionText;
         _choicesLabel.text = _currentStep.ChoicesText;
+        _stepImage.sprite = step.SpriteImage;
     }
 
     private void MenuButtonClicked()
